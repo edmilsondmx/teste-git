@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            margin: 2px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            border: 2px solid black;
+            
+        }
+        span{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border: 2px solid black;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            border-radius: 5px;
+           
+        }
+        
+        .calc{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .result{
+            display: flex;
+            width: 100%;
+            height: 40px;
+        }
+        .result button, span{
+            flex: 1;
+        }
+        .num1{
+            display: flex;
+            height: 40px;
+        }
+        .num1 button{
+            flex: 1;
+        }
+        .num0{
+            display: flex;
+            height: 40px;
+        }
+        .num0 button{
+            height: 100%;
+            flex: 1;
+        }
+        .operadores{
+            display: flex;
+            height: 40px;
+        }
+        .operadores button{
+            flex: 1;
+            margin-top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="result">
+            <button onclick="limpar()" id="limpar">C</button>
+            <span id="res" value=""></span>
+        </div>
+        <div class="num1">
+            <button onclick="calc(this)" value="7" id="sete">7</button>
+            <button onclick="calc(this)" value="8" id="oito">8</button>
+            <button onclick="calc(this)" value="9" id="nove">9</button>
+        </div>
+        <div class="num1">
+            <button onclick="calc(this)" value="4" id="quatro">4</button>
+            <button onclick="calc(this)" value="5" id="cinco">5</button>
+            <button onclick="calc(this)" value="6" id="seis">6</button>
+        </div>
+        <div class="num1">
+            <button onclick="calc(this)" value="1" id="um">1</button>
+            <button onclick="calc(this)" value="2" id="dois">2</button>
+            <button onclick="calc(this)" value="3" id="tres">3</button>
+        </div>
+        <div class="num0">
+            <button onclick="calc(this)" value="0" id="zero">0</button>
+            <button onclick="resultado()" value="=" id="igual">=</button>
+        </div>
+        <div class="operadores">
+            <button onclick="calc(this)" value="+" id="soma">+</button>
+            <button onclick="calc(this)" value="-" id="sub">-</button>
+            <button onclick="calc(this)" value="*" id="mult">*</button>
+            <button onclick="calc(this)" value="/" id="divi">/</button>
+        </div>
+    </div>
+
+    <script>
+        var display = document.getElementById('res');
+        
+        function limpar(){
+            display.innerText = " " 
+        }
+
+        function calc(e){
+            var num = e.value;
+            display.innerHTML += num
+
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>
