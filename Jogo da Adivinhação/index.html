@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o Número</title>
+    <script src="script.js"></script>
+    <style>
+        main{
+            width: 430px;
+            margin: auto;
+            background-color: rgb(30, 127, 255);
+            padding: 20px;
+            
+        }
+        .n1, #n1, #n2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            float: left;
+            margin-right: 10px;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            background-color: #EEE;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+
+        }
+        button{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin: 10px;
+            font-size: 20px;
+        }
+        #res{
+            width: 420px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            background-color: green;
+            color: whitesmoke;
+            font-weight: bold;
+            text-align: center;
+        }
+        .digit{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <main>
+        <div class="digit">
+            <div class="n1">?</div>
+            <div id="n1"></div>
+            <label for="n2"><h3>Digite um número aqui!</h3></label>
+            <input type="text" id="n2">
+        </div>
+        <div id="res" style="clear:both"></div>
+        <div class="btn">
+            <button onclick="verificar()">Verificar</button>
+            <button onclick="recomecar()">Recomeçar</button>
+        </div>
+    </main>
+    
+</body>
+</html>
