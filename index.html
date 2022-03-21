@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe o Número</title>
-    <script src="script.js"></script>
+    <script src="Jogo da Adivinhação/script.js"></script>
     <style>
         main{
             width: 430px;
             margin: auto;
             background-color: rgb(30, 127, 255);
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
             
         }
         .n1, #n1, #n2{
             width: 200px;
             height: 200px;
             border: 1px solid #000;
-            float: left;
+            border-radius: 10px;
             margin-right: 10px;
             font-size: 100px;
             text-align: center;
             line-height: 200px;
             background-color: #EEE;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+
         }
         .btn{
             display: flex;
@@ -36,9 +39,13 @@
             font-weight: bold;
             margin: 10px;
             font-size: 20px;
+            border-radius: 5px;
+            padding: 5px 10px;
+
         }
         #res{
-            width: 420px;
+            margin: auto;
+            margin-top: 10px;
             font-family: 'Courier New', Courier, monospace;
             font-size: 25px;
             background-color: green;
@@ -58,10 +65,10 @@
         <div class="digit">
             <div class="n1">?</div>
             <div id="n1"></div>
-            <label for="n2"><h3>Digite um número aqui!</h3></label>
+            <label for="n2" style="font-size: 20px;"><h3>Digite um número aqui! &#x2B07</h3></label>
             <input type="text" id="n2">
         </div>
-        <div id="res" style="clear:both"></div>
+        <div id="res"></div>
         <div class="btn">
             <button onclick="verificar()">Verificar</button>
             <button onclick="recomecar()">Recomeçar</button>
